@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>colors</key>
+	<array/>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/alumno/Desktop/Agenda/agenda_con_suffle_contactos/Agenda_shuffle/Agenda_shuffle/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameImagenContacto</string>
+			<key>relativePath</key>
+			<string>./ImagenContacto.imageset</string>
+			<key>swiftSymbol</key>
+			<string>imagenContacto</string>
+		</dict>
+	</array>
+	<key>symbols</key>
+	<array/>
+</dict>
+</plist>

@@ -36,14 +36,33 @@ struct PantallaAgenda: View {
                 }
             }
             .background(Color.cyan)
-            .frame(width: largo_de_pantalla, alignment: Alignment/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(alignment: Alignment/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .padding(10)
         }
         .background(Color.mint)
-       
+        
+        HStack(alignment: VerticalAlignment.center, spacing: 25){
+            ZStack{
+                Circle().frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red).foregroundColor(Color.green)
+                Rectangle().frame(width: 65, height: 65).foregroundColor(Color.cyan)
+                Image(systemName: "plus").background(Color.red)
+            }.padding(15).onTapGesture {
+                print("Falta implementar estar parte")
+            }
+            
+            Spacer()
+            
+            ZStack{
+                Circle().frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red).foregroundColor(Color.green)
+                Circle().frame(width: 65, height: 65).foregroundColor(Color.cyan)
+                Image(systemName: "shuffle").background(Color.red)
+            }.padding(15).onTapGesture {
+                print("Lanzar un intent para inicialiar la llamada")
+            }
+            
+        }
     }
 }
-
-
 
 #Preview {
     PantallaAgenda()

@@ -9,57 +9,26 @@
 /* Begin PBXBuildFile section */
 		FB408D572D6F79AA009DA795 /* Agenda_shuffleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB408D562D6F79AA009DA795 /* Agenda_shuffleApp.swift */; };
 		FB408D5B2D6F79AB009DA795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB408D5A2D6F79AB009DA795 /* Assets.xcassets */; };
-		FB408D5E2D6F79AB009DA795 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB408D5D2D6F79AB009DA795 /* Preview Assets.xcassets */; };
 		FB408D812D6F7C0A009DA795 /* PantallaAgenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB408D802D6F7C0A009DA795 /* PantallaAgenda.swift */; };
 		FB408D842D6F7FC2009DA795 /* contacto_prevista.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB408D832D6F7FC2009DA795 /* contacto_prevista.swift */; };
 		FB408D872D6F8715009DA795 /* contacto_agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB408D862D6F8715009DA795 /* contacto_agenda.swift */; };
+		FB501E382D7618CC009368DE /* pantalla_agregar_contacto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB501E372D7618CC009368DE /* pantalla_agregar_contacto.swift */; };
+		FB95D1512D761C430022CAB0 /* icono.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95D1502D761C430022CAB0 /* icono.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FB408D642D6F79AB009DA795 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB408D4B2D6F79AA009DA795 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB408D522D6F79AA009DA795;
-			remoteInfo = Agenda_shuffle;
-		};
-		FB408D6E2D6F79AB009DA795 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB408D4B2D6F79AA009DA795 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB408D522D6F79AA009DA795;
-			remoteInfo = Agenda_shuffle;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FB408D532D6F79AA009DA795 /* Agenda_shuffle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda_shuffle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB408D562D6F79AA009DA795 /* Agenda_shuffleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agenda_shuffleApp.swift; sourceTree = "<group>"; };
 		FB408D5A2D6F79AB009DA795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FB408D5D2D6F79AB009DA795 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB408D632D6F79AB009DA795 /* Agenda_shuffleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Agenda_shuffleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB408D6D2D6F79AB009DA795 /* Agenda_shuffleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Agenda_shuffleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB408D802D6F7C0A009DA795 /* PantallaAgenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaAgenda.swift; sourceTree = "<group>"; };
 		FB408D832D6F7FC2009DA795 /* contacto_prevista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contacto_prevista.swift; sourceTree = "<group>"; };
 		FB408D862D6F8715009DA795 /* contacto_agenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contacto_agenda.swift; sourceTree = "<group>"; };
+		FB501E372D7618CC009368DE /* pantalla_agregar_contacto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_agregar_contacto.swift; sourceTree = "<group>"; };
+		FB95D1502D761C430022CAB0 /* icono.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icono.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FB408D502D6F79AA009DA795 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB408D602D6F79AB009DA795 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB408D6A2D6F79AB009DA795 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,8 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				FB408D532D6F79AA009DA795 /* Agenda_shuffle.app */,
-				FB408D632D6F79AB009DA795 /* Agenda_shuffleTests.xctest */,
-				FB408D6D2D6F79AB009DA795 /* Agenda_shuffleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,28 +57,21 @@
 		FB408D552D6F79AA009DA795 /* Agenda_shuffle */ = {
 			isa = PBXGroup;
 			children = (
+				FB501E362D7618A4009368DE /* pantallas */,
 				FB408D852D6F85A7009DA795 /* modelos */,
 				FB408D822D6F7F61009DA795 /* componentes */,
 				FB408D562D6F79AA009DA795 /* Agenda_shuffleApp.swift */,
 				FB408D5A2D6F79AB009DA795 /* Assets.xcassets */,
-				FB408D5C2D6F79AB009DA795 /* Preview Content */,
 				FB408D802D6F7C0A009DA795 /* PantallaAgenda.swift */,
 			);
 			path = Agenda_shuffle;
-			sourceTree = "<group>";
-		};
-		FB408D5C2D6F79AB009DA795 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				FB408D5D2D6F79AB009DA795 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		FB408D822D6F7F61009DA795 /* componentes */ = {
 			isa = PBXGroup;
 			children = (
 				FB408D832D6F7FC2009DA795 /* contacto_prevista.swift */,
+				FB95D1502D761C430022CAB0 /* icono.swift */,
 			);
 			path = componentes;
 			sourceTree = "<group>";
@@ -122,6 +82,14 @@
 				FB408D862D6F8715009DA795 /* contacto_agenda.swift */,
 			);
 			path = modelos;
+			sourceTree = "<group>";
+		};
+		FB501E362D7618A4009368DE /* pantallas */ = {
+			isa = PBXGroup;
+			children = (
+				FB501E372D7618CC009368DE /* pantalla_agregar_contacto.swift */,
+			);
+			path = pantallas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,42 +112,6 @@
 			productReference = FB408D532D6F79AA009DA795 /* Agenda_shuffle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FB408D622D6F79AB009DA795 /* Agenda_shuffleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB408D7A2D6F79AB009DA795 /* Build configuration list for PBXNativeTarget "Agenda_shuffleTests" */;
-			buildPhases = (
-				FB408D5F2D6F79AB009DA795 /* Sources */,
-				FB408D602D6F79AB009DA795 /* Frameworks */,
-				FB408D612D6F79AB009DA795 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB408D652D6F79AB009DA795 /* PBXTargetDependency */,
-			);
-			name = Agenda_shuffleTests;
-			productName = Agenda_shuffleTests;
-			productReference = FB408D632D6F79AB009DA795 /* Agenda_shuffleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FB408D6C2D6F79AB009DA795 /* Agenda_shuffleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB408D7D2D6F79AB009DA795 /* Build configuration list for PBXNativeTarget "Agenda_shuffleUITests" */;
-			buildPhases = (
-				FB408D692D6F79AB009DA795 /* Sources */,
-				FB408D6A2D6F79AB009DA795 /* Frameworks */,
-				FB408D6B2D6F79AB009DA795 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB408D6F2D6F79AB009DA795 /* PBXTargetDependency */,
-			);
-			name = Agenda_shuffleUITests;
-			productName = Agenda_shuffleUITests;
-			productReference = FB408D6D2D6F79AB009DA795 /* Agenda_shuffleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -192,14 +124,6 @@
 				TargetAttributes = {
 					FB408D522D6F79AA009DA795 = {
 						CreatedOnToolsVersion = 15.4;
-					};
-					FB408D622D6F79AB009DA795 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = FB408D522D6F79AA009DA795;
-					};
-					FB408D6C2D6F79AB009DA795 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = FB408D522D6F79AA009DA795;
 					};
 				};
 			};
@@ -217,8 +141,6 @@
 			projectRoot = "";
 			targets = (
 				FB408D522D6F79AA009DA795 /* Agenda_shuffle */,
-				FB408D622D6F79AB009DA795 /* Agenda_shuffleTests */,
-				FB408D6C2D6F79AB009DA795 /* Agenda_shuffleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,22 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB408D5E2D6F79AB009DA795 /* Preview Assets.xcassets in Resources */,
 				FB408D5B2D6F79AB009DA795 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB408D612D6F79AB009DA795 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB408D6B2D6F79AB009DA795 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,41 +161,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB95D1512D761C430022CAB0 /* icono.swift in Sources */,
 				FB408D812D6F7C0A009DA795 /* PantallaAgenda.swift in Sources */,
 				FB408D842D6F7FC2009DA795 /* contacto_prevista.swift in Sources */,
 				FB408D872D6F8715009DA795 /* contacto_agenda.swift in Sources */,
+				FB501E382D7618CC009368DE /* pantalla_agregar_contacto.swift in Sources */,
 				FB408D572D6F79AA009DA795 /* Agenda_shuffleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB408D5F2D6F79AB009DA795 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB408D692D6F79AB009DA795 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FB408D652D6F79AB009DA795 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB408D522D6F79AA009DA795 /* Agenda_shuffle */;
-			targetProxy = FB408D642D6F79AB009DA795 /* PBXContainerItemProxy */;
-		};
-		FB408D6F2D6F79AB009DA795 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB408D522D6F79AA009DA795 /* Agenda_shuffle */;
-			targetProxy = FB408D6E2D6F79AB009DA795 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FB408D752D6F79AB009DA795 /* Debug */ = {
@@ -466,78 +348,6 @@
 			};
 			name = Release;
 		};
-		FB408D7B2D6F79AB009DA795 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "alumnos.uacj.Agenda-shuffleTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Agenda_shuffle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Agenda_shuffle";
-			};
-			name = Debug;
-		};
-		FB408D7C2D6F79AB009DA795 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "alumnos.uacj.Agenda-shuffleTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Agenda_shuffle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Agenda_shuffle";
-			};
-			name = Release;
-		};
-		FB408D7E2D6F79AB009DA795 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "alumnos.uacj.Agenda-shuffleUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Agenda_shuffle;
-			};
-			name = Debug;
-		};
-		FB408D7F2D6F79AB009DA795 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "alumnos.uacj.Agenda-shuffleUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Agenda_shuffle;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -555,24 +365,6 @@
 			buildConfigurations = (
 				FB408D782D6F79AB009DA795 /* Debug */,
 				FB408D792D6F79AB009DA795 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB408D7A2D6F79AB009DA795 /* Build configuration list for PBXNativeTarget "Agenda_shuffleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB408D7B2D6F79AB009DA795 /* Debug */,
-				FB408D7C2D6F79AB009DA795 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB408D7D2D6F79AB009DA795 /* Build configuration list for PBXNativeTarget "Agenda_shuffleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB408D7E2D6F79AB009DA795 /* Debug */,
-				FB408D7F2D6F79AB009DA795 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

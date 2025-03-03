@@ -28,18 +28,19 @@ struct ContactoPrevista: View {
             
             Spacer()
             
-            VStack(alignment: HorizontalAlignment.leading) {
+            VStack(alignment: HorizontalAlignment.leading, spacing: 10){
                 Text(contacto_a_mostrar.nombre)
                 Text(contacto_a_mostrar.telefono)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .background(Color.gray)
-            .frame(width: 150)
             
             Spacer()
             
         }
-        .frame(width: 250)
+        .frame(maxWidth: .infinity)
         .background(Color.red)
+        .clipShape(RoundedRectangle(cornerSize: esquinas_redondeadas))
         .onTapGesture {
             al_pulsar()
         }
