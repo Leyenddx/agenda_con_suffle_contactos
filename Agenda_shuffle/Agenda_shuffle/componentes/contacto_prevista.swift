@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContactoPrevista: View {
+    
     let esquinas_redondeadas = CGSize(width: 25, height: 25)
     
     var contacto_a_mostrar: ContactoAgenda
@@ -24,7 +25,7 @@ struct ContactoPrevista: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 70, alignment: .center)
                     .clipShape(RoundedRectangle(cornerSize: esquinas_redondeadas))
-            }.background(Color.blue)
+            }
             
             Spacer()
             
@@ -33,13 +34,13 @@ struct ContactoPrevista: View {
                 Text(contacto_a_mostrar.telefono)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color.gray)
+            .foregroundColor(.white)
             
             Spacer()
             
         }
         .frame(maxWidth: .infinity)
-        .background(Color.red)
+        .background(Color.blue)
         .clipShape(RoundedRectangle(cornerSize: esquinas_redondeadas))
         .onTapGesture {
             al_pulsar()
