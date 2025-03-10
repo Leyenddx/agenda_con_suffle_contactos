@@ -18,10 +18,10 @@ struct pantalla_del_ganador: View {
     var body: some View {
         ZStack{
             Circle()
-                .fill(.blue)
+                .fill(.green)
                 .frame(width: 350)
             Circle()
-                .fill(LinearGradient(gradient: Gradient(colors: [.white, .blue, .black]), startPoint: .top, endPoint: .bottom))
+                .fill(LinearGradient(gradient: Gradient(colors: [.white, .green, .black]), startPoint: .top, endPoint: .bottom))
                 .frame(width: 240)
             Image("Kalaca")
                 .resizable()

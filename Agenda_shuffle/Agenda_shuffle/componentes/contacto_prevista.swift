@@ -20,10 +20,11 @@ struct ContactoPrevista: View {
             Spacer()
             
             VStack{
-                Image("ImagenContacto")
+                Image("Contacto")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 70, alignment: .center)
+                    .frame(width: 40, alignment: .center)
+                    .padding(10)
                     .clipShape(RoundedRectangle(cornerSize: esquinas_redondeadas))
             }
             
@@ -34,13 +35,13 @@ struct ContactoPrevista: View {
                 Text(contacto_a_mostrar.telefono)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             
             Spacer()
             
         }
         .frame(maxWidth: .infinity)
-        .background(Color.blue)
+        .background(Color.yellow)
         .clipShape(RoundedRectangle(cornerSize: esquinas_redondeadas))
         .onTapGesture {
             al_pulsar()

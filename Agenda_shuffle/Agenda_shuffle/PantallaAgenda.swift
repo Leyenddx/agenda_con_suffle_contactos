@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-var contactos = [
-    ContactoAgenda(nombre:"Juan", telefono: "12345"),
-    ContactoAgenda(nombre:"Ju", telefono: "12345"),
-    ContactoAgenda(nombre:"Jan", telefono: "12345"),
-    ContactoAgenda(nombre:"Jun", telefono: "12345"),
-]
 
+enum PantallasDisponibles: String, Identifiable{
+    case pantalla_agregar, pantalla_aleatorio
+    
+    var id: String { rawValue }
+}
 
 struct PantallaAgenda: View {
     var largo_de_pantalla = UIScreen.main.bounds.width
@@ -24,50 +23,67 @@ struct PantallaAgenda: View {
         ContactoAgenda(nombre:"Osvaldo", telefono: "(656) 123 455"),
         ContactoAgenda(nombre:"Osvaldo", telefono: "(656) 123 455"),
         ContactoAgenda(nombre:"Osvaldo", telefono: "(656) 123 455"),
+        ContactoAgenda(nombre:"Osvaldo", telefono: "(656) 123 455"),
+        ContactoAgenda(nombre:"Osvaldo", telefono: "(656) 123 455"),
+        ContactoAgenda(nombre:"Osvaldo", telefono: "(656) 123 455"),
+
     ]
     
+    @State var pantalla_a_mostrar: PantallasDisponibles?
+    
     var body: some View {
-        
         ScrollView{
             VStack(spacing: 10) {
                 ForEach(contactos_actuales){ contacto in
                     ContactoPrevista(contacto_a_mostrar: contacto, al_pulsar:{print("Te envia saludos \(contacto.nombre) desde la pantalla de agenda")})
                 }
             }
-            .background(Color.cyan)
             .frame(alignment: Alignment/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .padding(10)
         }
-        .background(Color.mint)
+        .background((LinearGradient(gradient: Gradient(colors: [.green, .white]), startPoint: .top, endPoint: .bottom)))
         
         HStack(alignment: VerticalAlignment.center, spacing: 25){
             ZStack{
-                Circle().frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red).foregroundColor(Color.green)
-                Rectangle().frame(width: 65, height: 65).foregroundColor(Color.cyan)
-                Image(systemName: "plus").foregroundColor(.white)
+                
+                Circle().fill(LinearGradient(gradient: Gradient(colors: [.white, .green, .black]), startPoint: .top, endPoint: .bottom)).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red).foregroundColor(Color.green)
+                
+                Circle().frame(width: 65, height: 65).foregroundColor(Color.green)
+                
+                Image(systemName: "plus").resizable().aspectRatio(contentMode: .fit).frame(width: 30).foregroundColor(.white)
+            
             }.padding(15).onTapGesture {
                 print("Falta implementar la seccion de agregar contacto")
-                mostrar_pantalla_agregar_contacto.toggle()
+                pantalla_a_mostrar = .pantalla_agregar
             }
             
             Spacer()
             
             ZStack{
-                Circle().frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red).foregroundColor(Color.green)
-                Circle().frame(width: 65, height: 65).foregroundColor(Color.cyan)
-                Image(systemName: "shuffle").background(Color.red)
+                Circle().fill(LinearGradient(gradient: Gradient(colors: [.white, .green, .black]), startPoint: .top, endPoint: .bottom)).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red).foregroundColor(Color.green)
+                Circle().frame(width: 65, height: 65).foregroundColor(Color.green)
+                Image(systemName: "shuffle").foregroundColor(.white)
             }.padding(15).onTapGesture {
                 print("Lanzar un intent para inicialiar la llamada")
             }
-        }.background(Color.yellow).sheet(isPresented: $mostrar_pantalla_agregar_contacto){
-            PantallaAgregarContacto(boton_salir: {
-                mostrar_pantalla_agregar_contacto.toggle()
-            }, boton_agregar: {
-                nombre, numero in
-                    let contacto_nuevo = ContactoAgenda(nombre: nombre, telefono: numero)
-                contactos_actuales.append(contacto_nuevo)
-                mostrar_pantalla_agregar_contacto.toggle()
-            })
+        }.background(Color.yellow)
+            .sheet(isPresented: $mostrar_pantalla_agregar_contacto){
+            
+        }.sheet(item: $pantalla_a_mostrar){
+            pantalla in switch(pantalla){
+            case .pantalla_agregar:
+                PantallaAgregarContacto(
+                    boton_salir: {
+                        pantalla_a_mostrar = PantallasDisponibles.pantalla_aleatorio
+                },
+                boton_agregar: { nombre, numero in
+                        let contacto_nuevo = ContactoAgenda(nombre: nombre, telefono: numero)
+                    contactos_actuales.append(contacto_nuevo)
+                    pantalla_a_mostrar = nil
+                })
+            case .pantalla_aleatorio:
+                Text("Adios mundo")
+            }
         }
     }
 }
