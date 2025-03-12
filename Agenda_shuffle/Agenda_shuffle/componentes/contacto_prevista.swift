@@ -15,17 +15,20 @@ struct ContactoPrevista: View {
     var al_pulsar: () -> Void = {print("No se ha implementado")}
     
     var body: some View {
+        
         HStack(alignment: VerticalAlignment.center){
-            
+    
             Spacer()
             
             VStack{
-                Image("Contacto")
+                Image(systemName: "person.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .foregroundStyle(Color("Accent"))
                     .frame(width: 40, alignment: .center)
                     .padding(10)
                     .clipShape(RoundedRectangle(cornerSize: esquinas_redondeadas))
+                    
             }
             
             Spacer()
@@ -35,13 +38,16 @@ struct ContactoPrevista: View {
                 Text(contacto_a_mostrar.telefono)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .foregroundColor(.black)
+            .foregroundColor(Color("Accent"))
             
             Spacer()
             
         }
         .frame(maxWidth: .infinity)
-        .background(Color.yellow)
+        .overlay(
+                RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color("Outline"), lineWidth: 4))
+        .background(Color("On Accent"))
         .clipShape(RoundedRectangle(cornerSize: esquinas_redondeadas))
     }
 }

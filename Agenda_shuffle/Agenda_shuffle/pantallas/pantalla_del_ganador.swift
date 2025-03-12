@@ -18,10 +18,10 @@ struct pantalla_del_ganador: View {
     var body: some View {
         ZStack{
             Circle()
-                .fill(.green)
+                .fill(Color("Accent"))
                 .frame(width: 350)
             Circle()
-                .fill(LinearGradient(gradient: Gradient(colors: [.white, .green, .black]), startPoint: .top, endPoint: .bottom))
+                .fill(LinearGradient(gradient: Gradient(colors: [.white, Color("Accent"), .black]), startPoint: .top, endPoint: .bottom))
                 .frame(width: 240)
             Image("Kalaca")
                 .resizable()
@@ -29,8 +29,30 @@ struct pantalla_del_ganador: View {
                 .frame(width: 150, alignment: .center)
                 .clipShape(RoundedRectangle(cornerSize: esquinas_redondeadas))
         }
-        Text(contacto_a_molestar.nombre)
-        Text(contacto_a_molestar.telefono)
+        VStack{
+            Text(contacto_a_molestar.nombre)
+            Text(contacto_a_molestar.telefono)
+
+            
+            ZStack{
+                Circle()
+                    .fill(Color("Error Container"))
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red)
+                    .foregroundColor(Color.green)
+                Circle()
+                    .frame(width: 65, height: 65)
+                    .foregroundColor(Color("Error Container"))
+                Image(systemName: "phone.down.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 30)
+                    .foregroundColor(Color("Error"))
+            }.padding(15).onTapGesture {
+                print("Finalizar llamada")
+            }
+            
+        }
+        .foregroundColor(Color("On Surface"))
     }
 }
 

@@ -26,26 +26,34 @@ struct PantallaAgregarContacto: View {
         VStack{
             Text("Nombre de usuario a agregar")
             ZStack{
-                Rectangle().frame(maxWidth: .infinity, maxHeight: 75).foregroundColor(Color.green)
-                TextField("Ingresa ", text: $nombre).padding(10)
+                Rectangle()
+                    .frame(maxWidth: .infinity, maxHeight: 75)
+                    .foregroundColor(Color("Accent Container"))
+                TextField("Ingresa el nombre del nuevo contacto", text: $nombre).padding(10)
             }
             
             Text("Numero telefonico")
-            TextField("+00 000-00-00", text: $numero_telefonicio).frame(height: 35).padding(10)
+            TextField("+00 000-00-00", text: $numero_telefonicio)
+                .frame(height: 35)
+                .padding(10)
             
             HStack{
                 //Este icono es para agregar a un contacto
-                Icono(tamano: 65, ruta_icono: "person.crop.circle.badge.plus").onTapGesture {
+                Icono(tamano: 65, ruta_icono: "person.crop.circle.badge.plus")
+                    .onTapGesture {
                     boton_agregar(nombre, numero_telefonicio)
                 }
                 
                 Spacer()
                 //Este icono es para salir
-                Icono(tamano: 65, ruta_icono: "arrowshape.backward.circle").foregroundColor(.white).background(nombre == "" ? Color.black: Color.cyan).onTapGesture {
+                Icono(tamano: 65, ruta_icono: "arrowshape.backward.circle")
+                    .foregroundColor(.white)
+                    .background(nombre == "" ? Color("Error"): Color.cyan)
+                    .onTapGesture {
                     boton_salir()
                 }
 
-            }.background((LinearGradient(gradient: Gradient(colors: [.green, .black]), startPoint: .leading, endPoint: .trailing)))
+            }.background(Color("Inverse Accent"))
         }
     }
     

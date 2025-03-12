@@ -46,18 +46,26 @@ struct PantallaAgenda: View {
                 .frame(alignment: Alignment/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .padding(10)
             }
-            .background((LinearGradient(gradient: Gradient(colors: [.green, .white]), startPoint: .top, endPoint: .bottom)))
+            .background(Color("Accent Container"))
         }
         
         
         HStack(alignment: VerticalAlignment.center, spacing: 25){
             ZStack{
                 
-                Circle().fill(LinearGradient(gradient: Gradient(colors: [.white, .green, .black]), startPoint: .top, endPoint: .bottom)).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red).foregroundColor(Color.green)
+                Circle()
+                    .fill(Color("Accent Container"))
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red)
+                    .foregroundColor(Color.green)
+                Circle()
+                    .frame(width: 65, height: 65)
+                    .foregroundColor(Color("Accent Container"))
                 
-                Circle().frame(width: 65, height: 65).foregroundColor(Color.green)
-                
-                Image(systemName: "plus").resizable().aspectRatio(contentMode: .fit).frame(width: 30).foregroundColor(.white)
+                Image(systemName: "plus")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 30)
+                    .foregroundColor(Color("On Accent Container"))
             
             }.padding(15).onTapGesture {
                 print("Falta implementar la seccion de agregar contacto")
@@ -67,13 +75,22 @@ struct PantallaAgenda: View {
             Spacer()
             
             ZStack{
-                Circle().fill(LinearGradient(gradient: Gradient(colors: [.white, .green, .black]), startPoint: .top, endPoint: .bottom)).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red).foregroundColor(Color.green)
-                Circle().frame(width: 65, height: 65).foregroundColor(Color.green)
-                Image(systemName: "shuffle").foregroundColor(.white)
+                Circle()
+                    .fill(Color("Accent Container"))
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/).tint(Color.red)
+                    .foregroundColor(Color.green)
+                Circle()
+                    .frame(width: 65, height: 65)
+                    .foregroundColor(Color("Accent Container"))
+                Image(systemName: "shuffle")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 30)
+                    .foregroundColor(Color("On Accent Container"))
             }.padding(15).onTapGesture {
                 print("Lanzar un intent para inicialiar la llamada")
             }
-        }.background(Color.yellow)
+        }.background(Color("Accent"))
             .sheet(isPresented: $mostrar_pantalla_agregar_contacto){
             
         }.sheet(item: $pantalla_a_mostrar){
