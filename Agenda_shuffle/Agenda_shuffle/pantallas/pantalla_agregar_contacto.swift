@@ -21,41 +21,41 @@ struct PantallaAgregarContacto: View {
         nombre, numero in print("Parece que te has equivocado")
     }
     
-    var body: some View {
-
-        VStack{
-            Text("Nombre de usuario a agregar")
-            ZStack{
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 75)
-                    .foregroundColor(Color("Accent Container"))
-                TextField("Ingresa el nombre del nuevo contacto", text: $nombre).padding(10)
+     var body: some View {
+        VStack(spacing: 20) {
+            Text("Agregar Contacto")
+                .font(.title)
+            
+            TextField("Nombre", text: $nombre)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal)
+            
+            TextField("Teléfono", text: $numero)
+                .keyboardType(.phonePad)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal)
+            
+            if showError {
+                Text("¡Completa todos los campos!")
+                    .foregroundColor(.red)
             }
             
-            Text("Numero telefonico")
-            TextField("+00 000-00-00", text: $numero_telefonicio)
-                .frame(height: 35)
-                .padding(10)
-            
-            HStack{
-                //Este icono es para agregar a un contacto
-                Icono(tamano: 65, ruta_icono: "person.crop.circle.badge.plus")
-                    .onTapGesture {
-                    boton_agregar(nombre, numero_telefonicio)
-                }
-                
+            HStack {
+                CircleButton(icon: "xmark.circle", action: onDismiss)
                 Spacer()
-                //Este icono es para salir
-                Icono(tamano: 65, ruta_icono: "arrowshape.backward.circle")
-                    .foregroundColor(.white)
-                    .background(nombre == "" ? Color("Error"): Color.cyan)
-                    .onTapGesture {
-                    boton_salir()
-                }
-
-            }.background(Color("Inverse Accent"))
+                CircleButton(icon: "checkmark.circle", action: {
+                    guard !nombre.isEmpty, !numero.isEmpty else {
+                        showError = true
+                        return
+                    }
+                    onSave(nombre, numero)
+                    onDismiss()
+                })
+            }.padding()
         }
+        .padding()
     }
+
     
 }
 

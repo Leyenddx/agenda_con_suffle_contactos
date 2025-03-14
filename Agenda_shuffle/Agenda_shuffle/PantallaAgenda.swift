@@ -37,7 +37,7 @@ struct PantallaAgenda: View {
                 VStack(spacing: 10) {
                     ForEach(contactos_actuales){ contacto in
                         NavigationLink{
-                            Text("Hola mundo")
+                            PantallaDelGanador(contacto: contacto)
                         } label: {
                             ContactoPrevista(contacto_a_mostrar: contacto)
                         }
@@ -68,7 +68,6 @@ struct PantallaAgenda: View {
                     .foregroundColor(Color("On Accent Container"))
             
             }.padding(15).onTapGesture {
-                print("Falta implementar la seccion de agregar contacto")
                 pantalla_a_mostrar = .pantalla_agregar
             }
             
@@ -106,7 +105,9 @@ struct PantallaAgenda: View {
                     pantalla_a_mostrar = nil
                 })
             case .pantalla_aleatorio:
-                Text("Adios mundo")
+                if let contacto = contactos_actuales.randomElement(){
+                    pantalla_del_ganador(contacto: contacto)
+                }
             }
         }
     }

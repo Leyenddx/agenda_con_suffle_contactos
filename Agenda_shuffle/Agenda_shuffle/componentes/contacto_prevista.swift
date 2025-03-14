@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContactoPrevista: View {
-    
+
     let esquinas_redondeadas = CGSize(width: 25, height: 25)
     
     var contacto_a_mostrar: ContactoAgenda

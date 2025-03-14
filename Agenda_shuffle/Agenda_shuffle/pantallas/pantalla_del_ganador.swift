@@ -11,9 +11,19 @@ var contacto_alterno = ContactoAgenda(nombre: "Fuckensio", telefono: "656 265 67
 
 struct pantalla_del_ganador: View {
     
-    
+    let contacto: ContactoAgenda
+
     var contacto_a_molestar: ContactoAgenda
     let esquinas_redondeadas = CGSize(width: 25, height: 25)
+
+     private func makeCall() {
+        let cleanNumber = contacto.telefono.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        guard let url = URL(string: "tel://\(cleanNumber)"), UIApplication.shared.canOpenURL(url) else {
+            print("Error: No se puede realizar la llamada")
+            return
+        }
+        UIApplication.shared.open(url)
+    }
     
     var body: some View {
         ZStack{
@@ -33,6 +43,7 @@ struct pantalla_del_ganador: View {
             Text(contacto_a_molestar.nombre)
             Text(contacto_a_molestar.telefono)
 
+            CircleButton(icon: "phone.down.fill", action: makeCall)
             
             ZStack{
                 Circle()
